@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style>
+        /* Estilo para o fundo */
+        body {
+            background-image: url('https://c0.wallpaperflare.com/preview/347/508/926/analysis-analytics-analyzing-business.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Defina a altura do corpo para preencher a altura da tela */
+            margin: 0; /* Remova margens padrão */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff; /* Cor do texto */
+            text-align: center; /* Centralize o texto */
+        }
+
+        /* Estilos para o formulário */
+        form {
+            width: 300px; /* Defina a largura do formulário */
+            margin-top: 50px; /* Adicione uma margem superior para ajustar a posição vertical */
+        }
+
+        /* Estilos para os campos de entrada e botão */
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: 100%; /* Defina a largura dos campos de entrada e botão */
+            margin-bottom: 10px; /* Adicione uma margem inferior para separar os elementos */
+            padding: 10px; /* Adicione um preenchimento interno */
+            border-radius: 5px; /* Adicione bordas arredondadas */
+            border: 1px solid #ccc; /* Adicione uma borda */
+            box-sizing: border-box; /* Garanta que o preenchimento e a borda não aumentem a largura total */
+        }
+
+        /* Estilos para o link de login */
+        p {
+            margin-top: 20px; /* Adicione uma margem superior para o parágrafo */
+        }
+    </style>
+</head>
+<body>
+    <h1>Registro</h1>
+    <form action="/registro" method="POST">
+        <label for="username">Nome de Usuário:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Registrar</button>
+    </form>
+    <p>Já tem uma conta? <a href="/login">Faça login aqui</a>.</p>
+</body>
+</html>

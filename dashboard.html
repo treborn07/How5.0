@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* Estilo para o fundo */
+        body {
+            background-image: url('https://c1.wallpaperflare.com/preview/598/795/658/59687998547af.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Defina a altura do corpo para preencher a altura da tela */
+            margin: 0; /* Remova margens padrão */
+            padding-top: 50px; /* Adicione espaço para o menu */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilos para o menu */
+        .menu {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            position: fixed; /* Fixa o menu no topo da página */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Garante que o menu esteja acima de outros elementos */
+            overflow: hidden;
+        }
+
+        .menu a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Estilo para a mensagem de boas-vindas */
+        .welcome-message {
+            color: #fff; /* Cor da fonte */
+            font-size: 24px; /* Tamanho da fonte */
+            text-align: center; /* Alinhar centralizado */
+            margin-top: 50px; /* Espaçamento entre o menu e a mensagem */
+        }
+    </style>
+</head>
+<body>
+<!-- Menu na parte superior -->
+<div class="menu">
+    <a href="#">Início</a>
+    <a href="{{ url_for('portfolio') }}">Portfólio</a>
+    <a href="{{ url_for('depoimentos') }}">Depoimentos</a>
+    <a href="{{ url_for('valores_a_receber') }}">Valores a Receber</a>
+    <a href="{{ url_for('contratos') }}">Contratos</a>
+    <a href="{{ url_for('contato') }}">Contato</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</div>
+
+<!-- Mensagem de boas-vindas -->
+<div class="welcome-message">
+    <h1>Bem-vindo ao seu espaço de Administração Sr. Fotógrafo</h1>
+    <p>Estamos felizes em vê-lo aqui!</p>
+</div>
+
+</body>
+</html>

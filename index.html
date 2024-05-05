@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Administrativo</title>
+    <style>
+        /* Estilo para o fundo */
+        body {
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/529/555/624/mask-neon-person-photography-wallpaper-preview.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Defina a altura do corpo para preencher a altura da tela */
+            margin: 0; /* Remova margens padrão */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff; /* Cor do texto */
+        }
+
+        /* Estilos para o conteúdo */
+        .content {
+            text-align: center;
+            margin-top: 20vh; /* Margem superior de 20% da altura da tela */
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para a mensagem de boas-vindas */
+        .welcome-message {
+            color: #bfff00; /* Cor verde limão */
+            font-size: 28px; /* Tamanho da fonte */
+        }
+
+        /* Estilos para o parágrafo */
+        .description {
+            color: #bfff00; /* Cor verde limão */
+            font-size: 18px; /* Tamanho da fonte */
+        }
+
+        /* Estilos para o link de login */
+        .login-link {
+            color: #007bff; /* Cor azul */
+            font-weight: bold; /* Negrito */
+            text-decoration: none; /* Remover sublinhado */
+            font-size: 24px; /* Tamanho da fonte */
+        }
+    </style>
+</head>
+<body>
+    <!-- Mensagem de boas-vindas -->
+    <div class="content">
+        <h1 class="welcome-message">Bem-vindo ao Portal Administrativo</h1>
+        <p class="description">Gerencie suas fotografias de forma eficiente.</p>
+    </div>
+
+    <!-- Link de login -->
+    <p><a href="{{ url_for('login') }}" class="login-link">Login</a></p>
+</body>
+</html>

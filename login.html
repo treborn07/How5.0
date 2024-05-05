@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Fotos </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://c0.wallpaperflare.com/preview/751/2/550/chart-graph-business-finance.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .login-container {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .login-container form {
+            margin-bottom: 20px;
+        }
+        .login-container form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .login-container form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container p {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Sistema de Gerenciamento</h1>
+        <form action="/login" method="POST">
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="/registro">Cadastre-se aqui</a>.</p>
+        {% if message %}
+            <p style="color: red;">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
